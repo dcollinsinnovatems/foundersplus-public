@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Valley of Death - PaaS Technology Company: "TrackLayer"</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; max-width: 900px; }
+        canvas { max-width: 100%; }
+        table { width: 100%; border-collapse: collapse; margin-top: 2em; }
+        th, td { border: 1px solid #ccc; padding: 0.5em; text-align: right; }
+        th { background: #f4f4f4; }
+        h1 { text-align: center; }
+        @media print { canvas { page-break-after: always; } }
+    </style>
+</head>
+<body>
+    <h1>Surviving the Valley of Death</h1>
+    <h2>PaaS Technology Company: "TrackLayer"</h2>
+    <p>TrackLayer spent its first year building a complex platform-as-a-service for IoT fleet managers. With no revenue model until Month 16, the team raised $250K in Month 1 and burned ~$30K/month on developers, product, and pilots. A proof-of-concept with a Mississippi distributor in Month 9 validated demand, but integration delays ate 3 more months. Expenses peaked in Month 14 with a full-time CTO and server upgrades. They launched paid pilots in Month 17, earning $8K–$10K/month, scaling to $45K/month by Month 30 as partners rolled out across 3 states. A grant from InnovateMS in Month 24 helped extend runway. Cash dropped below -$240K before recovery. Their chart looks like a U-curve with a mid-surge cash bump from grants. Net cash doesn’t go positive until Month 33 — but they survive and show strong slope upward. Classic Valley of Death with deep capital need and long delay to meaningful revenue.</p>
+    <canvas id="valleyChart"></canvas>
+    <script>
+        const ctx = document.getElementById('valleyChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+                datasets: [
+                    {
+                        label: 'Revenue',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8000, 9000, 11000, 13000, 15000, 17000, 20000, 23000, 26000, 30000, 33000, 36000, 40000, 45000, 45000, 45000, 45000, 45000, 45000, 45000],
+                        borderColor: 'green',
+                        fill: false,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Expenses',
+                        data: [30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000],
+                        borderColor: 'orange',
+                        fill: false,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Net Cash',
+                        data: [220000, 190000, 160000, 130000, 100000, 70000, 40000, 10000, -20000, -50000, -80000, -110000, -140000, -170000, -200000, -230000, -252000, -273000, -292000, -309000, -324000, -337000, -347000, -304000, -308000, -308000, -305000, -299000, -289000, -274000, -259000, -244000, -229000, -214000, -199000, -184000],
+                        borderColor: 'red',
+                        fill: false,
+                        tension: 0.3
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'PaaS Technology Company: "TrackLayer" - Cash Flow Over 36 Months'
+                    }
+                },
+                scales: {
+                    y: { beginAtZero: false }
+                }
+            }
+        });
+    </script>
+    <h3>Monthly Financial Table</h3>
+    <table>
+        <tr><th>Month</th><th>Revenue ($)</th><th>Expenses ($)</th><th>Ending Cash ($)</th></tr>
+        <tr><td>1</td><td>0</td><td>30000</td><td>220000</td></tr>
+<tr><td>2</td><td>0</td><td>30000</td><td>190000</td></tr>
+<tr><td>3</td><td>0</td><td>30000</td><td>160000</td></tr>
+<tr><td>4</td><td>0</td><td>30000</td><td>130000</td></tr>
+<tr><td>5</td><td>0</td><td>30000</td><td>100000</td></tr>
+<tr><td>6</td><td>0</td><td>30000</td><td>70000</td></tr>
+<tr><td>7</td><td>0</td><td>30000</td><td>40000</td></tr>
+<tr><td>8</td><td>0</td><td>30000</td><td>10000</td></tr>
+<tr><td>9</td><td>0</td><td>30000</td><td>-20000</td></tr>
+<tr><td>10</td><td>0</td><td>30000</td><td>-50000</td></tr>
+<tr><td>11</td><td>0</td><td>30000</td><td>-80000</td></tr>
+<tr><td>12</td><td>0</td><td>30000</td><td>-110000</td></tr>
+<tr><td>13</td><td>0</td><td>30000</td><td>-140000</td></tr>
+<tr><td>14</td><td>0</td><td>30000</td><td>-170000</td></tr>
+<tr><td>15</td><td>0</td><td>30000</td><td>-200000</td></tr>
+<tr><td>16</td><td>0</td><td>30000</td><td>-230000</td></tr>
+<tr><td>17</td><td>8000</td><td>30000</td><td>-252000</td></tr>
+<tr><td>18</td><td>9000</td><td>30000</td><td>-273000</td></tr>
+<tr><td>19</td><td>11000</td><td>30000</td><td>-292000</td></tr>
+<tr><td>20</td><td>13000</td><td>30000</td><td>-309000</td></tr>
+<tr><td>21</td><td>15000</td><td>30000</td><td>-324000</td></tr>
+<tr><td>22</td><td>17000</td><td>30000</td><td>-337000</td></tr>
+<tr><td>23</td><td>20000</td><td>30000</td><td>-347000</td></tr>
+<tr><td>24</td><td>23000</td><td>30000</td><td>-304000</td></tr>
+<tr><td>25</td><td>26000</td><td>30000</td><td>-308000</td></tr>
+<tr><td>26</td><td>30000</td><td>30000</td><td>-308000</td></tr>
+<tr><td>27</td><td>33000</td><td>30000</td><td>-305000</td></tr>
+<tr><td>28</td><td>36000</td><td>30000</td><td>-299000</td></tr>
+<tr><td>29</td><td>40000</td><td>30000</td><td>-289000</td></tr>
+<tr><td>30</td><td>45000</td><td>30000</td><td>-274000</td></tr>
+<tr><td>31</td><td>45000</td><td>30000</td><td>-259000</td></tr>
+<tr><td>32</td><td>45000</td><td>30000</td><td>-244000</td></tr>
+<tr><td>33</td><td>45000</td><td>30000</td><td>-229000</td></tr>
+<tr><td>34</td><td>45000</td><td>30000</td><td>-214000</td></tr>
+<tr><td>35</td><td>45000</td><td>30000</td><td>-199000</td></tr>
+<tr><td>36</td><td>45000</td><td>30000</td><td>-184000</td></tr>
+
+    </table>
+</body>
+</html>
