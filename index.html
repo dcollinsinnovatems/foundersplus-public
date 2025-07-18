@@ -3,45 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <title>FoundersPlus Landing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .cards { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
-    .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; flex: 1 1 250px; text-align: center; }
-    h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-    body { font-family: sans-serif; max-width: 800px; margin: 0 auto; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f6f8fa;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .container {
+      max-width: 520px;
+      width: 100%;
+      margin-top: 48px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(80,120,180,0.09);
+      padding: 36px 28px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2.3rem;
+      letter-spacing: -1px;
+      color: #223;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .portal-link {
+      display: inline-block;
+      margin-bottom: 28px;
+      font-size: 1.11rem;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid #2563eb;
+      border-radius: 6px;
+      padding: 10px 18px;
+      background: linear-gradient(90deg,#fff 85%,#eff6ff 100%);
+      transition: background 0.2s, color 0.2s, border 0.2s;
+    }
+    .portal-link:hover {
+      background: #2563eb;
+      color: #fff;
+      border-color: #1e40af;
+    }
+    .card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .card {
+      background: #f1f5f9;
+      border-radius: 9px;
+      box-shadow: 0 2px 8px rgba(60,60,110,0.07);
+      padding: 18px 20px 13px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-left: 4px solid #2563eb;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 24px rgba(60,100,220,0.10);
+      background: #e0e7ef;
+    }
+    .card-title {
+      margin: 0 0 8px 0;
+      font-size: 1.13rem;
+      font-weight: 600;
+      color: #111c2b;
+    }
+    .card-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 2px;
+      border-bottom: 1px dotted #2563eb;
+      transition: color 0.2s, border 0.2s;
+      font-size: 1.03rem;
+      padding-bottom: 1px;
+    }
+    .card-link:hover {
+      color: #0ea5e9;
+      border-bottom: 1px solid #0ea5e9;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .container {
+        max-width: 98vw;
+        padding: 18px 6vw 16px 6vw;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      .card-title {
+        font-size: 1rem;
+      }
+      .portal-link {
+        font-size: 1rem;
+        padding: 8px 6vw;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>FoundersPlus</h1>
-  <p>
-    <a href="https://innovatems.my.canva.site/foundersplus" target="_blank">
-      Go to FoundersPlus Portal
+  <div class="container">
+    <h1>FoundersPlus</h1>
+    <a class="portal-link" href="https://innovatems.my.canva.site/foundersplus" target="_blank">
+      Visit the FoundersPlus Portal
     </a>
-  </p>
-  <div class="cards">
-    <div class="card">
-      <h2>AI Software Startup Sample</h2>
-      <a href="Valley of Death Financials Sample - AI Software Startup.html">Open</a>
-    </div>
-    <div class="card">
-      <h2>SaaS from IP Startup Sample</h2>
-      <a href="Valley of Death Financials Sample - Commercialized IP with SaaS Startup.html">Open</a>
-    </div>
-    <div class="card">
-      <h2>Consulting Startup Sample</h2>
-      <a href="Valley of Death Financials Sample - Consulting Startup.html">Open</a>
-    </div>
-    <div class="card">
-      <h2>PaaS Startup Sample</h2>
-      <a href="Valley of Death Financials Sample - PaaS Startup.html">Open</a>
-    </div>
-    <div class="card">
-      <h2>Retail Startup Sample</h2>
-      <a href="Valley of Death Financials Sample - Retail Startup.html">Open</a>
-    </div>
-    <div class="card">
-      <h2>Funding Resources</h2>
-      <a href="startup_financial_resources.html">Open</a>
-    </div>
+    <ul class="card-list">
+      <li class="card">
+        <div class="card-title">AI Software Startup Sample</div>
+        <a class="card-link" href="VoD_Financials_AI_Startup.html" target="_blank">Open Example</a>
+      </li>
+      <li class="card">
+        <div class="card-title">Consulting Startup Sample</div>
+        <a class="card-link" href="VoD_Financials_Consulting_Startup.html" target="_blank">Open Example</a>
+      </li>
+      <li class="card">
+        <div class="card-title">PaaS Startup Sample</div>
+        <a class="card-link" href="VoD_Financials_PaaS_Startup.html" target="_blank">Open Example</a>
+      </li>
+      <li class="card">
+        <div class="card-title">Retail Startup Sample</div>
+        <a class="card-link" href="VoD_Financials_Retail_Startup.html" target="_blank">Open Example</a>
+      </li>
+      <li class="card">
+        <div class="card-title">SaaS Commercialized IP Startup Sample</div>
+        <a class="card-link" href="VoD_Financials_SaaSCommercializedIP_Startup.html" target="_blank">Open Example</a>
+      </li>
+      <li class="card">
+        <div class="card-title">Funding Resources</div>
+        <a class="card-link" href="startup_financial_resources.html" target="_blank">View Resources</a>
+      </li>
+    </ul>
   </div>
 </body>
 </html>
